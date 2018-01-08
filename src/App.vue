@@ -10,8 +10,10 @@
 
     <p>{{ dynamicComponent }}</p>
 
-
-    <component :is="dynamicComponent">Here</component>
+    <!--using keep-alive to retain the state of a component-->
+    <keep-alive>
+      <component :is="dynamicComponent">Default Content</component>
+    </keep-alive>
   </div>
 </template>
 
