@@ -2,6 +2,7 @@
   <div>
     <div class="title">
       <slot name="title"></slot>
+      <span class="subtitle"><slot name="subtitle">Default Title</slot></span>
     </div>
     <div class="content">
       <slot name="content"></slot>
@@ -34,5 +35,9 @@
 
   .content {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .subtitle {
+    color: #ccc;
   }
 </style>
