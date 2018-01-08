@@ -18,4 +18,8 @@
     margin: 30px auto;
     text-align: center;
   }
+
+  h2 {
+    color: #f9cd0b;
+  }
 </style>
