@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-quote>
-      <h2>The Quote</h2>
+      <h2>{{ quoteTitle }}</h2>
       <p>A Wonderful Quote!</p>
     </app-quote>
   </div>
@@ -11,6 +11,11 @@
   import Quote from './components/Quote.vue';
 
   export default {
+    data: function () {
+      return {
+        quoteTitle: 'A Great Quote'
+      }
+    },
     components: {
       appQuote: Quote
     }
