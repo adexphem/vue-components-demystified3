@@ -1,23 +1,36 @@
 <template>
   <div id="app">
-    <app-quote>
-      <h2 slot="title">{{ quoteTitle }}</h2>
-      <p slot="content">A Wonderful Quote!</p>
-    </app-quote>
+    <p>
+      <button @click="dynamicComponent = 'appAuthor'">Author</button>
+      <button @click="dynamicComponent = 'appNew'">New</button>
+      <button @click="dynamicComponent = 'appQuote'">Quote</button>
+    </p>
+
+    <hr>
+
+    <p>{{ dynamicComponent }}</p>
+
+
+    <component :is="dynamicComponent">Here</component>
   </div>
 </template>
 
 <script>
+  import New from './components/New.vue';
+  import Author from './components/Author.vue';
   import Quote from './components/Quote.vue';
 
   export default {
     data: function () {
       return {
-        quoteTitle: 'A Great Quote'
+        quoteTitle: 'A Great Quote',
+        dynamicComponent: 'appQuote'
       }
     },
     components: {
-      appQuote: Quote
+      appQuote: Quote,
+      appAuthor: Author,
+      appNew: New
     }
   }
 </script>
