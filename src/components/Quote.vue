@@ -1,6 +1,11 @@
 <template>
   <div>
-    <slot></slot>
+    <div class="title">
+      <slot name="title"></slot>
+    </div>
+    <div class="content">
+      <slot name="content"></slot>
+    </div>
   </div>
 </template>
 
@@ -21,5 +26,13 @@
 
   h2 {
     color: #f9cd0b;
+  }
+
+  .title {
+    font-style: italic;
+  }
+
+  .content {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 </style>
